@@ -141,7 +141,7 @@ Leave `disablePayloadAccessControl` unset when Payload should keep checking `rea
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `API_KEY` | required | Bearer token for uploads, edits, and deletes |
-| `PUBLIC_URL` | listen address | Base URL written into file records. Docker Compose sets `http://localhost:4100`. |
+| `PUBLIC_URL` | `https://media.dynamicdreamz.net` | Base URL written into file records |
 | `PUBLIC_READ` | `true` | Allow anonymous `GET /files/...` |
 | `CORS_ORIGIN` | `*` | Browser origin allowed to call the API |
 | `MAX_UPLOAD_BYTES` | `209715200` | Upload limit, 200 MB |
