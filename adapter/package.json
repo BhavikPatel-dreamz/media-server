@@ -1,0 +1,13 @@
+{
+  "name": "@mediaserver/payload-storage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "@payloadcms/plugin-cloud-storage": "^3.0.0",
+    "payload": "^3.0.0"
+  }
+}

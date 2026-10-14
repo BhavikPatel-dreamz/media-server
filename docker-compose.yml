@@ -1,0 +1,19 @@
+services:
+  media:
+    build: .
+    ports:
+      - "4100:4100"
+    environment:
+      API_KEY: ${API_KEY:-change-me-please}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:4100}
+      PUBLIC_READ: ${PUBLIC_READ:-true}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+      MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-209715200}
+      PORT: 4100
+      DATA_DIR: /data
+    volumes:
+      - media-data:/data
+    restart: unless-stopped
+
+volumes:
+  media-data:

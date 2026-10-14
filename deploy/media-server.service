@@ -1,0 +1,17 @@
+[Unit]
+Description=Media server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/media/drive/Bhavik/Projects/Mediaserver
+EnvironmentFile=/media/drive/Bhavik/Projects/Mediaserver/.env
+Environment=HOST=127.0.0.1
+# /usr/bin/node is Node 18 and cannot run this app. This is the Node 22 already installed for ubuntu.
+ExecStart=/home/ubuntu/.nvm/versions/node/v22.23.2/bin/node --disable-warning=ExperimentalWarning src/index.js
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

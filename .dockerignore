@@ -1,0 +1,7 @@
+data/
+.git/
+.env
+test/
+*.md
+adapter/
+examples/
